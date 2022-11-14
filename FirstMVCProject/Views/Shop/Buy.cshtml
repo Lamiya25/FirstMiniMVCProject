@@ -1,0 +1,32 @@
+﻿@model Product
+
+<form class="mx-1 mx-md-4" method="post">
+    <input type="hidden" name="UserId"/>
+    <div class="d-flex flex-row align-items-center mb-4">
+        <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+        <div class="form-outline flex-fill mb-0">
+            <label class="form-label" for="form3Example3c">Product</label>
+            <input type="text" id="form3Example3c" name="Name"
+                   class="form-control" readonly value="@Model.Name"/>
+        </div>
+    </div>
+
+    <div class="d-flex flex-row align-items-center mb-4">
+        <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+        <div class="form-outline flex-fill mb-0">
+            <label class="form-label" for="form3Example3c">Description</label>
+            <input type="text" id="form3Example3c" name="Description"
+                   class="form-control" readonly value="@Model.Description" />
+        </div>
+    </div>
+
+    <div class="d-flex flex-row align-items-center mb-4">
+        <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+        <div class="form-outline flex-fill mb-0">
+            <label class="form-label" for="form3Example3c">Price</label>
+            <input type="text" id="form3Example3c" name="Price"
+                   class="form-control" readonly value="@Model.Price" />
+        </div>
+    </div>
+    <button type="submit" class="btn btn-danger btn-lg">Shop!</button>
+</form>

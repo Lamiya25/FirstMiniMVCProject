@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Category>
+
+	@{
+		int counter=1;
+	}
+
+
+	<div class="container">
+    <table class="table">
+        <thead>
+        <th>
+            #
+        </th>
+        <th>
+            Name
+        </th>
+        <th>
+            Edit
+        </th>
+        <th>
+            Delete
+        </th>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@counter</td>
+                    <td>@item.Name</td>
+                    <td>
+                        <a href="/category/edit/@item.CategoryID"
+                       class="btn btn-warning">Edit</a>
+                    </td>
+                        <td>
+                        <a href="/category/delete/@item.CategoryID"
+                        class="btn btn-danger"
+                           onclick="return confirm('Are you sure?')" >Delete</a>
+                        </td>
+                </tr>
+                counter++;
+            }
+
+        </tbody>
+    </table>
+    <a href="/category/create" class="btn btn-success">Create</a>
+</div>
